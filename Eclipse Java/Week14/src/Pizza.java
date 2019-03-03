@@ -15,14 +15,14 @@ public class Pizza
   //the price for this pizza
   private double price;
   
-  //main constructor - must supply name, topping's and price
+  //main constructor - must supply name, toppings and price
   public Pizza(String reqName, String [] reqToppings, double reqPrice)
   {
     name = reqName;
     toppings = reqToppings;
     price = reqPrice;
   }
-
+  
   //get the name of the pizza
   public String getName()
   {
@@ -41,6 +41,7 @@ public class Pizza
     return price;
   }
   public String toString() {
-	  return "Pizza: " + getName() + ", price: " + getPrice() + ", toppings: " + Arrays.toString(getToppings());
+	  return "The pizza is: " + getName() + ", the price is: " + Arrays.toString(getToppings()) + " and the price is: " + getPrice();
   }
+  
 }

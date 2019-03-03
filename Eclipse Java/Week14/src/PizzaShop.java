@@ -1,15 +1,13 @@
 import java.util.Arrays;
 
 /*
- * A class to model a pizza shop - has a database of pizza's, customers and 
- * can receive orders
+ * A class to model a pizza shop - has a database of pizzas, customers and 
+ * can recieve orders
  */
 
 public class PizzaShop
 {
-
-	
-  //the pizza database - all pizza's that can be ordered
+  //the pizza database - all pizzas that can be ordered
   private Pizza[]    pizzas;
   
   //the customer database - all customers that are known to the system
@@ -67,9 +65,7 @@ public class PizzaShop
   {
     return pizzas;
   }
-  
   public String orderStatus() {
-	  return "Current orders are: " + orders.toString(); 
+	  return "Current orders are " + Arrays.toString(orders);
   }
-  
 }

@@ -1,5 +1,4 @@
 
-
 /*
  * A class to represent a customer of a pizza shop
  */
@@ -31,6 +30,6 @@ public class Customer
     return address;
   }
   public String toString() {
-	  return "Customer name: " + getName() + ", address: " + getAddress();
+	  return "customer name: " + getName() + ", customer address: " + getAddress();
   }
 }

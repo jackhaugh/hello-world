@@ -4,7 +4,7 @@ public class TextProcessing {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(Arrays.toString(relativeFrequencies("i love programming")));
+		System.out.println(Arrays.toString(letterFrequencies("lovely lovely programming")));
 	}
 	public static double timesCharOccurs(String str, char character) {
 		int count = 0;

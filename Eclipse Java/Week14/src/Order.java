@@ -48,6 +48,6 @@ public class Order
     return totalPrice;
   }
   public String toString() {
-	  return "Order includes; Customer: " + getCustomer() + " , pizzas: " + Arrays.toString(getPizzas()) + " and price: " + getTotalPrice();
+	  return "This order is for " + getCustomer() + ", they want the following pizzas: " + Arrays.toString(getPizzas()) + ", and the total price is " + getTotalPrice();
   }
 }
