@@ -19,19 +19,28 @@ public class TestPizzaShop
     pizzaShop.addOrder(orderingCustomer, orderedPizzas);
     
     //create 2 more orders
-    Customer customer1 = customers[2];
+    orderingCustomer = customers[2];
     Pizza[] pizzasWanted1 = new Pizza [3];
     pizzasWanted1[0] = allPizzas[0];
     pizzasWanted1[2] = allPizzas[2];
     pizzasWanted1[1] = allPizzas[2];
-    pizzaShop.addOrder(customer1, pizzasWanted1);
+    pizzaShop.addOrder(orderingCustomer, pizzasWanted1);
     
-    Customer customer2 = customers[0];
+    orderingCustomer = customers[0];
     Pizza[] pizzasWanted2 = new Pizza [1];
     pizzasWanted2[0] = allPizzas[1];
-    pizzaShop.addOrder(customer2, pizzasWanted2);
+    pizzaShop.addOrder(orderingCustomer, pizzasWanted2);
+    
+    for(int x = 1; x < 100; x++) {
+    	orderingCustomer = customers[0];
+        Pizza[] pizzasWanted3 = new Pizza [1];
+        pizzasWanted3[0] = allPizzas[1];
+        pizzaShop.addOrder(orderingCustomer, pizzasWanted3);
+    	}
     
     System.out.println(pizzaShop.orderStatus());
+    
+   
     
   }
   

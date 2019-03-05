@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -14,7 +15,7 @@ public class PizzaShop
   private Customer[] customers;
   
   //the orders that have been placed so far
-  private Order[]    orders;
+  private ArrayList<Order> orders;
 
   //a variable to track what the next order number will be
   private int        orderNumber;
@@ -41,7 +42,7 @@ public class PizzaShop
     customers = new Customer[] { customer1, customer2, customer3 };
 
     // create an empty array for orders - will populate later (is 20 enough?)
-    orders = new Order[20];
+    orders = new ArrayList<Order>();
 
     // orderNumber starts at 0;
     orderNumber = 0;
@@ -50,8 +51,7 @@ public class PizzaShop
   //add an order to the list of orders (n.b., will fail at 21 orders...)
   public void addOrder(Customer customer, Pizza[] pizzas)
   {    
-    orders[orderNumber] = new Order(customer, pizzas);
-    orderNumber++;
+    orders.add(new Order(customer, pizzas));
   }
 
   //get the database of customers
@@ -66,6 +66,6 @@ public class PizzaShop
     return pizzas;
   }
   public String orderStatus() {
-	  return "Current orders are " + Arrays.toString(orders);
+	  return "Current orders are " + orders;
   }
 }
